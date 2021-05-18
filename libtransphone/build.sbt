@@ -2,6 +2,8 @@ name := "libtransphoner"
 
 version := "1.0-SNAPSHOT"
 
+resolvers += "jitpack" at "https://jitpack.io"
+
 libraryDependencies ++= Seq(
   "edu.stanford.nlp" % "stanford-corenlp" % "3.3.1",
   "edu.stanford.nlp" % "stanford-corenlp" % "3.3.1" classifier "models",
@@ -19,8 +21,9 @@ libraryDependencies ++= Seq(
   "org.scalatest" % "scalatest_2.10" % "2.0" % "test",
   "edu.berkeley.nlp" % "berkeleylm" % "1.1.2",
   "org.goobs" % "sim" % "1.0" from "https://github.com/gangeli/sim/releases/download/v1.0/sim.jar",
-  "edu.smu.tspell.wordnet" % "jaws" % "1.3" from "http://lyle.smu.edu/~tspell/jaws/jaws-bin.jar",
-  "edu.princeton.wordnet" % "wordnet" % "3.1" artifacts(Artifact("wordnet","bundle","tar.gz",None, Nil, Some(new URL("http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz")))),
+  "edu.smu.tspell.wordnet" % "jaws" % "1.3" from "file:///Users/brennanium/play-2.2.2/repository/cache/com.github.jaytaylor/jaws/jars/jaws-bin.jar",
+//  "com.github.jaytaylor" % "jaws" % "1.3",//"edu.smu.tspell.wordnet" % "jaws" % "1.3" from "https://github.com/jaytaylor/jaws/archive/refs/tags/1.3.zip",//"http://www.java2s.com/Code/JarDownload/jaws/jaws-bin.jar.zip", //"http://lyle.smu.edu/~tspell/jaws/jaws-bin.jar",
+  "edu.princeton.wordnet" % "wordnet" % "3.1" artifacts(Artifact("wordnet","bundle","tar.gz",None, Nil, Some(new URL("http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz")))), //"http://wordnetcode.princeton.edu/wn3.1.dict.tar.gz")))),
   "org.lexno" % "uwnapi" % "1.02" artifacts(Artifact("uwnapi","bundle","zip",None, Nil, Some(new URL("http://resources.mpi-inf.mpg.de/yago-naga/uwn/uwnapi.zip")))),
   "org.lexno" % "uwnapi-wordnet" % "1.02" artifacts(Artifact("uwnapi-wordnet","bundle","zip",None, Nil, Some(new URL("http://resources.mpi-inf.mpg.de/yago-naga/uwn/wordnet.zip")))),
   "org.lexno" % "uwnapi-core" % "1.02" artifacts(Artifact("uwnapi-core","bundle","zip",None, Nil, Some(new URL("http://resources.mpi-inf.mpg.de/yago-naga/uwn/uwn.zip"))))
